@@ -240,7 +240,7 @@ namespace lgfx
     uint32_t active_height = _cfg.panel->height();
 
     uint32_t div_a, div_b, div_n, clkcnt;
-    calcClockDiv(&div_a, &div_b, &div_n, &clkcnt, 240*1000*1000, std::min<uint32_t>(_cfg.freq_write, 40000000u));
+    calcClockDiv(&div_a, &div_b, &div_n, &clkcnt, _cfg.clk_dev_freq*1000*1000, std::min<uint32_t>(_cfg.freq_write, 40000000u));
     typeof(dev->lcd_clock) lcd_clock;
     lcd_clock.lcd_clkcnt_n = std::max<uint32_t>(1u, clkcnt - 1);
     lcd_clock.lcd_clk_equ_sysclk = (clkcnt == 1);
