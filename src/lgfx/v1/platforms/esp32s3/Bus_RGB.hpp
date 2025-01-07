@@ -53,7 +53,7 @@ namespace lgfx
 
       // pixel clock
       uint32_t freq_write = 16000000;
-      uint8_t clk_dev_freq = 274;
+      uint16_t clk_dev_freq = 274;
 
       int8_t pin_pclk = -1;
       int8_t pin_vsync = -1;
